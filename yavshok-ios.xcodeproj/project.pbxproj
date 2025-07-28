@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,7 +28,20 @@
 		672D2F392E109B25004295B5 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D2F382E109B25004295B5 /* EditProfileView.swift */; };
 		67F1FD182E10715D001FDF03 /* yavshok_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F1FD172E10715D001FDF03 /* yavshok_iosApp.swift */; };
 		67F1FD1A2E10715D001FDF03 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F1FD192E10715D001FDF03 /* ContentView.swift */; };
+		AFCA33AF2E37B233006D4B9D /* SwiftDotenv in Frameworks */ = {isa = PBXBuildFile; productRef = AFCA33AE2E37B233006D4B9D /* SwiftDotenv */; };
+		AFCA33B22E37B2AE006D4B9D /* Fakery in Frameworks */ = {isa = PBXBuildFile; productRef = AFCA33B12E37B2AE006D4B9D /* Fakery */; };
+		AFCA33D52E37E112006D4B9D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AFCA33D42E37E108006D4B9D /* README.md */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AFCD7CE32E34351100004DD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67F1FD0C2E10715C001FDF03 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67F1FD132E10715C001FDF03;
+			remoteInfo = "yavshok-ios";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		672D2F122E10760A004295B5 /* cat.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = cat.gif; sourceTree = "<group>"; };
@@ -53,13 +66,29 @@
 		67F1FD142E10715D001FDF03 /* yavshok-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yavshok-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F1FD172E10715D001FDF03 /* yavshok_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yavshok_iosApp.swift; sourceTree = "<group>"; };
 		67F1FD192E10715D001FDF03 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AF8C1ED02E37FC5400D72B2F /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
+		AFCA33D42E37E108006D4B9D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		AFCD7CDD2E34351100004DD3 /* yavshok-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "yavshok-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		AFCD7CDE2E34351100004DD3 /* yavshok-iosUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "yavshok-iosUITests"; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		67F1FD112E10715C001FDF03 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFCD7CDA2E34351100004DD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFCA33B22E37B2AE006D4B9D /* Fakery in Frameworks */,
+				AFCA33AF2E37B233006D4B9D /* SwiftDotenv in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +155,10 @@
 		67F1FD0B2E10715C001FDF03 = {
 			isa = PBXGroup;
 			children = (
+				AF8C1ECF2E37FADC00D72B2F /* assets */,
+				AFCA33D42E37E108006D4B9D /* README.md */,
 				67F1FD162E10715D001FDF03 /* yavshok-ios */,
+				AFCD7CDE2E34351100004DD3 /* yavshok-iosUITests */,
 				67F1FD152E10715D001FDF03 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -135,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				67F1FD142E10715D001FDF03 /* yavshok-ios.app */,
+				AFCD7CDD2E34351100004DD3 /* yavshok-iosUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,6 +181,14 @@
 				672D2F3A2E109C03004295B5 /* App */,
 			);
 			path = "yavshok-ios";
+			sourceTree = "<group>";
+		};
+		AF8C1ECF2E37FADC00D72B2F /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				AF8C1ED02E37FC5400D72B2F /* .env */,
+			);
+			path = assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +213,31 @@
 			productReference = 67F1FD142E10715D001FDF03 /* yavshok-ios.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AFCD7CDC2E34351100004DD3 /* yavshok-iosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFCD7CE72E34351100004DD3 /* Build configuration list for PBXNativeTarget "yavshok-iosUITests" */;
+			buildPhases = (
+				AFCD7CD92E34351100004DD3 /* Sources */,
+				AFCD7CDA2E34351100004DD3 /* Frameworks */,
+				AFCD7CDB2E34351100004DD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFCD7CE42E34351100004DD3 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				AFCD7CDE2E34351100004DD3 /* yavshok-iosUITests */,
+			);
+			name = "yavshok-iosUITests";
+			packageProductDependencies = (
+				AFCA33AE2E37B233006D4B9D /* SwiftDotenv */,
+				AFCA33B12E37B2AE006D4B9D /* Fakery */,
+			);
+			productName = "yavshok-iosUITests";
+			productReference = AFCD7CDD2E34351100004DD3 /* yavshok-iosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -179,11 +245,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1540;
+				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					67F1FD132E10715C001FDF03 = {
 						CreatedOnToolsVersion = 15.4;
+					};
+					AFCD7CDC2E34351100004DD3 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 67F1FD132E10715C001FDF03;
 					};
 				};
 			};
@@ -197,12 +267,15 @@
 			);
 			mainGroup = 67F1FD0B2E10715C001FDF03;
 			packageReferences = (
+				AFCA33AD2E37B233006D4B9D /* XCRemoteSwiftPackageReference "swift-dotenv" */,
+				AFCA33B02E37B2AE006D4B9D /* XCRemoteSwiftPackageReference "Fakery" */,
 			);
 			productRefGroup = 67F1FD152E10715D001FDF03 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				67F1FD132E10715C001FDF03 /* yavshok-ios */,
+				AFCD7CDC2E34351100004DD3 /* yavshok-iosUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -219,6 +292,14 @@
 				672D2F302E108FF0004295B5 /* photo_2.jpg in Resources */,
 				672D2F322E108FF0004295B5 /* photo_4.jpg in Resources */,
 				672D2F352E1093DD004295B5 /* SplashScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFCD7CDB2E34351100004DD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFCA33D52E37E112006D4B9D /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +327,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AFCD7CD92E34351100004DD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AFCD7CE42E34351100004DD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67F1FD132E10715C001FDF03 /* yavshok-ios */;
+			targetProxy = AFCD7CE32E34351100004DD3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		67F1FD202E10715E001FDF03 /* Debug */ = {
@@ -432,6 +528,40 @@
 			};
 			name = Release;
 		};
+		AFCD7CE52E34351100004DD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "shok.yavshok-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "yavshok-ios";
+			};
+			name = Debug;
+		};
+		AFCD7CE62E34351100004DD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "shok.yavshok-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "yavshok-ios";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -453,7 +583,48 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		AFCD7CE72E34351100004DD3 /* Build configuration list for PBXNativeTarget "yavshok-iosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFCD7CE52E34351100004DD3 /* Debug */,
+				AFCD7CE62E34351100004DD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AFCA33AD2E37B233006D4B9D /* XCRemoteSwiftPackageReference "swift-dotenv" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/thebarndog/swift-dotenv.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.0;
+			};
+		};
+		AFCA33B02E37B2AE006D4B9D /* XCRemoteSwiftPackageReference "Fakery" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vadymmarkov/Fakery.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AFCA33AE2E37B233006D4B9D /* SwiftDotenv */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFCA33AD2E37B233006D4B9D /* XCRemoteSwiftPackageReference "swift-dotenv" */;
+			productName = SwiftDotenv;
+		};
+		AFCA33B12E37B2AE006D4B9D /* Fakery */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFCA33B02E37B2AE006D4B9D /* XCRemoteSwiftPackageReference "Fakery" */;
+			productName = Fakery;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 67F1FD0C2E10715C001FDF03 /* Project object */;
 }

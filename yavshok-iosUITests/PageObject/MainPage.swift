@@ -33,7 +33,6 @@ final class MainPage {
     }
     
     
-    
     @discardableResult
     func assertPageIsOpened() -> Self {
         XCTAssert(screenTitle.waitForExistence(timeout: 2))
@@ -60,19 +59,6 @@ final class MainPage {
     
     
     @discardableResult
-    func inputEmail(email: String) -> Self {
-        emailField.tap()
-        emailField.typeText(email)
-        return self
-    }
-    
-    @discardableResult
-    func assertEmailFieldIsEmpty() -> Self {
-        XCTAssert(emailField.placeholderValue.debugDescription.contains("Email"))
-        return self
-    }
-    
-    @discardableResult
     func assertTextIsVisible(text: String) -> Self {
         XCTAssert(app.staticTexts[text].firstMatch.waitForExistence(timeout: 2))
         return self
@@ -81,6 +67,20 @@ final class MainPage {
     @discardableResult
     func assertTextIsNotVisible(text: String) -> Self {
         XCTAssertFalse(app.staticTexts[text].firstMatch.waitForExistence(timeout: 2))
+        return self
+    }
+    
+    
+    @discardableResult
+    func assertEmailFieldIsEmpty() -> Self {
+        XCTAssert(emailField.placeholderValue.debugDescription.contains("Email"))
+        return self
+    }
+    
+    @discardableResult
+    func inputEmail(email: String) -> Self {
+        emailField.tap()
+        emailField.typeText(email)
         return self
     }
     
@@ -96,13 +96,5 @@ final class MainPage {
         checkEmailButton.tap()
         return self
     }
-    
-    /*
-    @discardableResult
-    func checkTypedEmail(email: String) -> Self {
-        XCTAssert(emailField.value.debugDescription.contains(email))
-        return self
-    }
-    */
     
 }
